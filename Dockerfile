@@ -3,15 +3,15 @@ FROM debian:latest
 MAINTAINER Leonard Marschke <leonard@marschke.me>
 
 #update software repos
-RUN apt update
+RUN apt-get update
 
 #ugrade software
-RUN apt -y upgrade
+RUN apt-get -y upgrade
 
-RUN apt -y install apt-utils
+RUN apt-get -y install apt-utils
 
 #install some useful tools need to build grml (git is needed to use with gitlab ci)
-RUN apt -y install \
+RUN apt-get -y install \
         git \
         syslinux-common \
         syslinux-utils
@@ -20,7 +20,7 @@ RUN apt -y install \
 ADD sources.list.d/* /etc/apt/sources.list.d/
 
 #re-read sources
-RUN apt update
+RUN apt-get update
 
 #install keyring in order to use debbootstrap
 RUN apt-get --allow-unauthenticated install grml-debian-keyring
