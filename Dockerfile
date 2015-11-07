@@ -8,6 +8,8 @@ RUN apt update
 #ugrade software
 RUN apt -y upgrade
 
+RUN apt -y install apt-utils
+
 #install some useful tools need to build grml (git is needed to use with gitlab ci)
 RUN apt -y install \
         git \
