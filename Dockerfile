@@ -24,7 +24,8 @@ RUN apt update
 RUN apt-get --allow-unauthenticated install grml-debian-keyring
 
 #install grml-live
-RUN apt-get --no-install-recommends -y --force-yes install grml-live
+RUN apt-get --no-install-recommends -y --force-yes install grml-live \
+        grml-live-addons
 
 #clean up
 RUN apt-get clean
