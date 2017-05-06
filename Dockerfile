@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:jessie
 
 MAINTAINER Leonard Marschke <leonard@marschke.me>
 
